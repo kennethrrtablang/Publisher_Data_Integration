@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:DelayValidation="True"
+  DTS:ObjectName="PublisherADONet"
+  DTS:DTSID="{E54846D5-BEA6-44A4-9F35-CB22455AAF88}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::ADO_ConnectionString]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Server=tcp:sql-pdi-dev.database.windows.net,1433;User ID=pdiadmin;Initial Catalog=db-pdi-dev;Persist Security Info=True;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAgD6+LMkoFk2V2/fvVDkzlQAAAAACAAAAAAAQZgAAAAEAACAAAABt7tgBWCkdaOpbMUpTEijITIVNQKVQ0BRIQJ7zXPMoMgAAAAAOgAAAAAIAACAAAADLYiABofaeoeNRJVtaUWFyIQBmmfd1FFIHE4ljG3oAv5AAAACCtRjpP47XiMLexAipJJtVnLvr9SsumMnNQqp39JLgUvhZ/DLlJOGX8FyRs8cCj/bku2KzuHptiONd6TIuP3CI/rH2WbYt8RS7BbLFDR4qtuhHQwmzNUFsuAdit+mSzU6tjL2jQXkeg+xpdUB7T8zt2TRGfFiKIdGmnWl819ScAtYYX+hYSAo9ciX1u79crh1AAAAAjmXAZE1IVAGTgW6vOQ8OAZiFvpBiMbeFiGCPNgCcjm2ahFy4oAWCsKIluQWQOp5YBtDRkOH+h5Idh/AkGo/IAQ==</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

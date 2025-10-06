@@ -1,0 +1,13 @@
+﻿CREATE EXTERNAL TABLE [dbo].[view_pdi_Fund_Profile_Data] (
+    [Client_ID] INT NOT NULL,
+    [DOCUMENT_TYPE_ID] INT NOT NULL,
+    [DOCUMENT_NUMBER] VARCHAR (16) NOT NULL,
+    [FIELD_NAME] VARCHAR (150) NOT NULL,
+    [english] NVARCHAR (MAX) NULL,
+    [french] NVARCHAR (MAX) NULL,
+    [DATA_TYPE] VARCHAR (50) NOT NULL
+)
+    WITH (
+    DATA_SOURCE = [PUBLISHER_PROD]
+    );
+

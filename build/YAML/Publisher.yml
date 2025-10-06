@@ -1,0 +1,52 @@
+trigger:
+  branches:
+    include:
+    - Release
+    - Dev
+    - master
+    
+resources:
+  repositories:
+  - repository: Infrastructure
+    name: ICOM DevOps/Infrastructure
+    type: git
+    ref: PublisherETL
+    
+variables:
+- template: YAML/common/Environment_variables.yml@Infrastructure
+- template: YAML/common/common-variables.yml@Infrastructure
+- name: 'System.Debug'
+  value: true
+- name: projectname
+  value: "**/*.csproj"
+- name: buildargument
+  value: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
+
+- ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/Dev') }}:
+  - name: DeployDEV
+    value: true  
+- ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/Release') }}:
+  - name: DeployQA
+    value: true  
+- ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/master') }}:
+  - name: DeployStaging
+    value: true     
+- ${{ if eq(variables['Build.SourceBranch'], 'refs/heads/master') }}:
+  - name: DeployPROD
+    value: true  
+
+name: $(Build.RequestedFor)_$(TeamProject)_$(SourceBranchName)_$(date:yyyyMMdd).$(rev:.r)
+
+stages:
+- template: YAML/common/Build-Deploy-AzureFunction.yml@Infrastructure
+  parameters:
+    BuildPackage: true
+    DeployDEV: ${{ variables.DeployDEV }}
+    DeployQA: ${{ variables.DeployQA }}
+    DeployStaging: ${{ variables.DeployStaging }}
+    DeployPROD: ${{ variables.DeployPROD }}
+    
+    projectname1: ${{ variables.projectname }}
+    solution1: $(solution)
+    buildarg1: ${{ variables.buildargument }}
+    AppName: 'fapp-pdi'

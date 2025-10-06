@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher_Data_Operations", "Publisher_Data_Operations\Publisher_Data_Operations.csproj", "{C602D121-BED7-433F-8296-C2A03C99870C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F411156-2A4A-4AC6-803E-E93F621B3B9C}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher_Data_Operations_Tests", "Publisher_Data_Operations_Tests\Publisher_Data_Operations_Tests.csproj", "{D301DA76-ED46-48CE-BDDE-C0C7CC0E441B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDI_Azure_Function", "PDI_Azure_Function\PDI_Azure_Function.csproj", "{6200EB1C-C62A-47B1-B68D-D85BA1AE2F0D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DLL Core Tester", "DLL Core Tester\DLL Core Tester.csproj", "{3A92C5F1-F094-4029-B9AB-868955B17C68}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PDI_Database", "PDI_Database\PDI_Database.sqlproj", "{4CAA7172-3ABD-4161-9AF2-6F9118A619AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug DLL Tester|Any CPU = Debug DLL Tester|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C602D121-BED7-433F-8296-C2A03C99870C}.Debug DLL Tester|Any CPU.ActiveCfg = Debug|Any CPU
+		{C602D121-BED7-433F-8296-C2A03C99870C}.Debug DLL Tester|Any CPU.Build.0 = Debug|Any CPU
+		{C602D121-BED7-433F-8296-C2A03C99870C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C602D121-BED7-433F-8296-C2A03C99870C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C602D121-BED7-433F-8296-C2A03C99870C}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{C602D121-BED7-433F-8296-C2A03C99870C}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{C602D121-BED7-433F-8296-C2A03C99870C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C602D121-BED7-433F-8296-C2A03C99870C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D301DA76-ED46-48CE-BDDE-C0C7CC0E441B}.Debug DLL Tester|Any CPU.ActiveCfg = Debug|Any CPU
+		{D301DA76-ED46-48CE-BDDE-C0C7CC0E441B}.Debug DLL Tester|Any CPU.Build.0 = Debug|Any CPU
+		{D301DA76-ED46-48CE-BDDE-C0C7CC0E441B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D301DA76-ED46-48CE-BDDE-C0C7CC0E441B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D301DA76-ED46-48CE-BDDE-C0C7CC0E441B}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{D301DA76-ED46-48CE-BDDE-C0C7CC0E441B}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{D301DA76-ED46-48CE-BDDE-C0C7CC0E441B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D301DA76-ED46-48CE-BDDE-C0C7CC0E441B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6200EB1C-C62A-47B1-B68D-D85BA1AE2F0D}.Debug DLL Tester|Any CPU.ActiveCfg = Debug|Any CPU
+		{6200EB1C-C62A-47B1-B68D-D85BA1AE2F0D}.Debug DLL Tester|Any CPU.Build.0 = Debug|Any CPU
+		{6200EB1C-C62A-47B1-B68D-D85BA1AE2F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6200EB1C-C62A-47B1-B68D-D85BA1AE2F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6200EB1C-C62A-47B1-B68D-D85BA1AE2F0D}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{6200EB1C-C62A-47B1-B68D-D85BA1AE2F0D}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{6200EB1C-C62A-47B1-B68D-D85BA1AE2F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6200EB1C-C62A-47B1-B68D-D85BA1AE2F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A92C5F1-F094-4029-B9AB-868955B17C68}.Debug DLL Tester|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A92C5F1-F094-4029-B9AB-868955B17C68}.Debug DLL Tester|Any CPU.Build.0 = Debug|Any CPU
+		{3A92C5F1-F094-4029-B9AB-868955B17C68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A92C5F1-F094-4029-B9AB-868955B17C68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A92C5F1-F094-4029-B9AB-868955B17C68}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A92C5F1-F094-4029-B9AB-868955B17C68}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{3A92C5F1-F094-4029-B9AB-868955B17C68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A92C5F1-F094-4029-B9AB-868955B17C68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CAA7172-3ABD-4161-9AF2-6F9118A619AD}.Debug DLL Tester|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CAA7172-3ABD-4161-9AF2-6F9118A619AD}.Debug DLL Tester|Any CPU.Deploy.0 = Debug|Any CPU
+		{4CAA7172-3ABD-4161-9AF2-6F9118A619AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CAA7172-3ABD-4161-9AF2-6F9118A619AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CAA7172-3ABD-4161-9AF2-6F9118A619AD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4CAA7172-3ABD-4161-9AF2-6F9118A619AD}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CAA7172-3ABD-4161-9AF2-6F9118A619AD}.Development|Any CPU.Deploy.0 = Debug|Any CPU
+		{4CAA7172-3ABD-4161-9AF2-6F9118A619AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CAA7172-3ABD-4161-9AF2-6F9118A619AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CAA7172-3ABD-4161-9AF2-6F9118A619AD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3A92C5F1-F094-4029-B9AB-868955B17C68} = {2F411156-2A4A-4AC6-803E-E93F621B3B9C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9C9823B5-7A99-41F4-9DC1-04F8EF57C005}
+	EndGlobalSection
+EndGlobal

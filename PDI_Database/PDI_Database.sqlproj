@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>PDI_Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{4caa7172-3abd-4161-9af2-6f9118a619ad}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>PDI_Database</RootNamespace>
+    <AssemblyName>PDI_Database</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Security\" />
+    <Folder Include="External Resources\" />
+    <Folder Include="dbo\External Tables\" />
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Post Deployment" />
+    <Folder Include="Scripts\Pre Deployment" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\pdi_Processing_Queue_Log.sql" />
+    <Build Include="dbo\Tables\pdi_Client_Translation_Language_Missing_Log.sql" />
+    <Build Include="dbo\Tables\pdi_Publisher_Document_Field_Attribute.sql" />
+    <Build Include="dbo\Tables\pdi_Client_Translation_Language_Missing_Log_Details.sql" />
+    <Build Include="dbo\Tables\pdi_Data_Staging.sql" />
+    <Build Include="dbo\Tables\pdi_Transformed_Data.sql" />
+    <Build Include="dbo\Tables\sysssislog.sql" />
+    <Build Include="dbo\Tables\pdi_Data_Staging_STATIC_Translation_Language.sql" />
+    <Build Include="dbo\Tables\pdi_Data_Type_Sheet_Index.sql" />
+    <Build Include="dbo\Tables\pdi_Content_Scenario_Parameters.sql" />
+    <Build Include="dbo\Tables\pdi_File_Receipt_Log.sql" />
+    <Build Include="dbo\Tables\pdi_Publisher_Documents.sql" />
+    <Build Include="dbo\Tables\pdi_Publisher_Client.sql" />
+    <Build Include="dbo\Tables\pdi_Publisher_Document_Templates.sql" />
+    <Build Include="dbo\Tables\pdi_Client_Batch_Receipt_Log.sql" />
+    <Build Include="dbo\Tables\pdi_Client_Batch_Files.sql" />
+    <Build Include="dbo\Tables\pdi_Line_of_Business.sql" />
+    <Build Include="dbo\Tables\pdi_Data_Custodian.sql" />
+    <Build Include="dbo\Tables\pdi_Data_Type.sql" />
+    <Build Include="dbo\Tables\pdi_Client_Translation_Language.sql" />
+    <Build Include="dbo\Tables\pdi_Data_Load_Type.sql" />
+    <Build Include="dbo\Tables\pdi_Document_Life_Cycle_Status.sql" />
+    <Build Include="dbo\Tables\pdi_File_Log.sql" />
+    <Build Include="dbo\Tables\pdi_Client_Field_Content_Scenario_Language.sql" />
+    <Build Include="dbo\Tables\pdi_Document_Type.sql" />
+    <Build Include="dbo\Tables\pdi_Global_Text_Language.sql" />
+    <Build Include="dbo\Tables\pdi_File_Validation_Log.sql" />
+    <Build Include="dbo\Tables\pdi_Data_Staging_STATIC_Content_Scenario.sql" />
+    <Build Include="dbo\Tables\pdi_Client_Billable_Activity.sql" />
+    <Build Include="dbo\Tables\pdi_Data_Staging_STATIC_Field_Update.sql" />
+    <Build Include="dbo\Stored Procedures\sp_DataStagingPivot.sql" />
+    <Build Include="Security\AppCredential.sql" />
+    <Build Include="External Resources\PUBLISHER_PROD.sql" />
+    <Build Include="dbo\External Tables\view_pdi_Fund_Profile_Data.sql">
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <None Include="Scripts\Post Deployment\pdi_Client_Field_Content_Scenario_Language.Table.sql" />
+    <None Include="Scripts\Post Deployment\pdi_Client_Translation_Language.Table.sql" />
+    <None Include="Scripts\Post Deployment\pdi_Content_Scenario_Parameters.Table.sql" />
+    <None Include="Scripts\Post Deployment\pdi_Data_Custodian.Table.sql" />
+    <None Include="Scripts\Post Deployment\pdi_Data_Load_Type.Table.sql" />
+    <None Include="Scripts\Post Deployment\pdi_Data_Type.Table.sql" />
+    <None Include="Scripts\Post Deployment\pdi_Data_Type_Sheet_Index.Table.sql" />
+    <None Include="Scripts\Post Deployment\pdi_Document_Life_Cycle_Status.Table.sql" />
+    <None Include="Scripts\Post Deployment\pdi_Document_Type.Table.sql" />
+    <None Include="Scripts\Post Deployment\pdi_Global_Text_Language.Table.sql" />
+    <None Include="Scripts\Post Deployment\pdi_Line_of_Business.Table.sql" />
+    <None Include="Scripts\Post Deployment\pdi_Publisher_Client.Table.sql" />
+    <None Include="Scripts\Post Deployment\pdi_Publisher_Document_Field_Attribute.Table.sql" />
+    <None Include="Scripts\Post Deployment\pdi_Publisher_Document_Templates.Table.sql" />
+    <None Include="DatabaseQuery-Staging.sql" />
+    <Build Include="Release.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\Post Deployment\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PDI_Database.publish.Quality.xml" />
+    <None Include="Scripts\Pre Deployment\DropTables.sql" />
+    <None Include="Scripts\Pre Deployment\DropProcedures.sql" />
+    <None Include="Scripts\Pre Deployment\DropExternal.sql" />
+    <None Include="PDI_Database.Production.publish.xml" />
+    <None Include="Current-Deployment-Script.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Scripts\Pre Deployment\Script.PreDeployment.sql" />
+  </ItemGroup>
+</Project>

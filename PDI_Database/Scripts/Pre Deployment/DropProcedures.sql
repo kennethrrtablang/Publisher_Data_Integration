@@ -1,0 +1,5 @@
+﻿DROP PROCEDURE IF EXISTS [dbo].[sp_DataStagingPivot]
+DROP PROCEDURE IF EXISTS [dbo].[sp_LoadTransformedData]
+DROP PROCEDURE IF EXISTS [dbo].[sp_getemailparameters]
+DROP PROCEDURE IF EXISTS [dbo].[sp_setjobstatuscomplete]
+DROP PROCEDURE IF EXISTS [dbo].[sp_validationstatus]

@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "PDI_Azure_Function": {
+      "commandName": "Project"
+    }
+  }
+}
